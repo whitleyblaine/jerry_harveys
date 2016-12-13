@@ -1,12 +1,12 @@
 /*Sticky Footer*/
-<<<<<<< HEAD
+
 /*  
 Sticky Footer Solution
 by Steve Hatcher 
 http://stever.ca
 http://www.cssstickyfooter.com
 */
-=======
+
 html,
 body {
    margin:0;
@@ -86,7 +86,6 @@ footer {
 #subsList li a {
   color: black;
 }
->>>>>>> 0b5750a883f4557a6a140af6446921f62b572ac4
 
 * {margin:0;padding:0;} 
 
@@ -135,20 +134,18 @@ You also need to include this conditional style in the <head> of your HTML file 
   background-color: black;
   padding: 5px;
 }
-<<<<<<< HEAD
-#footer span {
-=======
 
 .footer span {
->>>>>>> 0b5750a883f4557a6a140af6446921f62b572ac4
+
   padding-bottom: 5px;
   margin-bottom: 5px;
   display: inline-block;
 }
+
 #footer span:first-child {
   margin-right: 4em;
 }
-<<<<<<< HEAD
+
 #footer a {
   margin-right: 0 auto;
   display: inline-block;
@@ -160,11 +157,7 @@ div .number {
   color: red;
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 27px;
-/*  margin: 0 auto;
-  position: relative;
-  padding: 4px;
-  margin: 0;*/
-=======
+}
 
 .footer a {
   margin-left: 2em;
@@ -208,8 +201,6 @@ div .number {
 /*bitcoin div*/
 .why-crypdesigns-div {
   background: black;
->>>>>>> 0b5750a883f4557a6a140af6446921f62b572ac4
-}
 
 /*Navbar*/
 
