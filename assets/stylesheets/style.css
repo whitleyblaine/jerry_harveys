@@ -28,74 +28,7 @@ footer {
 }
 
 b {
-  font-size: 18px;
-}
-
-b:hover {
-  font-size: 30px;
-}
-
-#fbLogo:hover {
-  height: 55px;
-  width: 55px;
-}
-
-/*Jumbotron*/
-.jumbotron {
-  height: 30em;
-}
-
-.client-jumbotron {
-  float: left;
-  width: 50%;
-  padding-right: 10%;
-  border-right: 1px black solid;
-}
-
-.designer-jumbotron {
-  float: right;
-  width: 50%;
-  padding-left: 10%;
-}
-
-.mainImageDiv {
-  border: 1px black solid;
-  height: 100%;
-}
-
-.mainImageDiv .imageDefault {
-  position: relative;
-  top: 30%;
-}
-
-/*Categories*/
-
-#categoryList {
-  padding-left: 0;
-}
-
-#categoryList li {
-  font-size: 2em;
-  margin: .7em;
-}
-
-#categoryList li a:hover {
-  color: #FCA311;
-}
-
-/*Subcategories*/
-#subsList li {
-  font-size: 1.5em;
-  margin: 1em;
-  padding-top: 1em;
-}
-
-#subsList li:last-child {
-  padding-bottom: 2em;
-}
-
-#subsList li a {
-  color: black;
+  font-size: 20px;
 }
 
 * {margin:0;padding:0;} 
@@ -140,8 +73,13 @@ You also need to include this conditional style in the <head> of your HTML file 
 /************************/
 
 /*Footer*/
-.footer div {
+#footer div {
   margin: 0 auto;
+}
+
+#footer {
+  margin: 5px;
+  background: black;
 }
 
 #wrap {
@@ -152,25 +90,12 @@ You also need to include this conditional style in the <head> of your HTML file 
   background-image: url("../images/wood.jpg");
 }
 
-#footer {
-  background-color: black;
-  margin-top: 5px;
-}
-
-.footer span {
-  margin-bottom: 5px;
+#footer span {
   display: inline-block;
 }
 
 #footer span:first-child {
   margin-right: 4em;
-}
-
-#footer a {
-  margin-right: 0 auto;
-  display: inline-block;
-  color: white;
-  margin-top: 8px;
 }
 
 .number {
@@ -179,52 +104,14 @@ You also need to include this conditional style in the <head> of your HTML file 
   font-size: 22px;
 }
 
-.footer a {
-  margin-left: 2em;
-  margin-right: 2em;
-  margin-bottom: 10px;
+#footer a {
+  margin: 1.5em 2em 1em 2em;
   display: inline-block;
-  color: lightblue
-}
-
-/* Pretty List */
-
-.pretty-list ol {
-  font-style: italic;
-  font-family: Georgia, Times, serif;
-  font-size: 24px;
-  color: #bfe1f1;
-}
-
-.pretty-list ol li p {
-  padding:8px;
-  font-style:normal;
-  font-family:Arial;
-  font-size:13px;
-  color:#eee;
-  border-left: 1px solid #999;
-}
-
-.pretty-list ol li p em {
-  display: block;
-  font-size: 3em;
-}
-
-/*List 2*/
-#list2 {
-  color: black;
-}
-#list2 ol li p {
-  color: #fff;
-}
-
-/*bitcoin div*/
-.why-crypdesigns-div {
-  background: black;
+  margin-right: 0 auto;
+  color: white;
 }
 
 /*Navbar*/
-
 .navbar {
   margin-bottom: 0!important;
 }
