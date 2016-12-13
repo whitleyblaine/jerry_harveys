@@ -9,10 +9,12 @@ Image credits: unsplash.com
 /********************************/
 .fade-carousel {
     position: relative;
-    height: 100vh;
+    height: 60vh;
+    margin-right: 3em;
+    margin-top: 5em;
 }
 .fade-carousel .carousel-inner .item {
-    height: 100vh;
+    height: 60vh;
 }
 .fade-carousel .carousel-indicators > li {
     margin: 0 2px;

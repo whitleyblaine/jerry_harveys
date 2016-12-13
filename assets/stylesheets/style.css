@@ -145,7 +145,6 @@ You also need to include this conditional style in the <head> of your HTML file 
 }
 
 #wrap {
-  background: black;
   color:white;
   font-size: 17px;
   margin: 0;
