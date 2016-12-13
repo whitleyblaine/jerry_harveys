@@ -149,6 +149,7 @@ You also need to include this conditional style in the <head> of your HTML file 
   font-size: 17px;
   margin: 0;
   padding: 25px;
+  background-image: url("../images/wood.jpg");
 }
 
 #footer {
