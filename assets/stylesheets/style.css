@@ -1,0 +1,233 @@
+/*Sticky Footer*/
+<<<<<<< HEAD
+/*  
+Sticky Footer Solution
+by Steve Hatcher 
+http://stever.ca
+http://www.cssstickyfooter.com
+*/
+=======
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#wrapper {
+   min-height:100%;
+   position:relative;
+}
+
+#body {
+   padding-bottom: 0; /* Height of the footer */
+}
+
+footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:130px; /* Height of the footer */
+}
+
+/*Jumbotron*/
+.jumbotron {
+  height: 30em;
+}
+
+.client-jumbotron {
+  float: left;
+  width: 50%;
+  padding-right: 10%;
+  border-right: 1px black solid;
+}
+
+.designer-jumbotron {
+  float: right;
+  width: 50%;
+  padding-left: 10%;
+}
+
+.mainImageDiv {
+  border: 1px black solid;
+  height: 100%;
+}
+
+.mainImageDiv .imageDefault {
+  position: relative;
+  top: 30%;
+}
+
+/*Categories*/
+
+#categoryList {
+  padding-left: 0;
+}
+
+#categoryList li {
+  font-size: 2em;
+  margin: .7em;
+}
+
+#categoryList li a:hover {
+  color: #FCA311;
+}
+
+/*Subcategories*/
+#subsList li {
+  font-size: 1.5em;
+  margin: 1em;
+  padding-top: 1em;
+}
+
+#subsList li:last-child {
+  padding-bottom: 2em;
+}
+
+#subsList li a {
+  color: black;
+}
+>>>>>>> 0b5750a883f4557a6a140af6446921f62b572ac4
+
+* {margin:0;padding:0;} 
+
+/* must declare 0 margins on everything, also for main layout components use padding, not 
+vertical margins (top and bottom) to add spacing, else those margins get added to total height 
+and your footer gets pushed down a bit more, creating vertical scroll bars in the browser */
+
+html, body {height: 100%;}
+
+#wrap {min-height: 100%;}
+
+#main {overflow:auto;
+  padding-bottom: 180px;}  /* must be same height as the footer */
+
+#footer {position: relative;
+  margin-top: -180px; /* negative value of footer height */
+  height: 180px;
+  clear:both;} 
+
+/*Opera Fix*/
+body:before {/* thanks to Maleika (Kohoutec)*/
+content:"";
+height:100%;
+float:left;
+width:0;
+margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+}
+
+/* IMPORTANT
+
+You also need to include this conditional style in the <head> of your HTML file to feed this style to IE 6 and lower and 8 and higher.
+
+<!--[if !IE 7]>
+  <style type="text/css">
+    #wrap {display:table;height:100%}
+  </style>
+<![endif]-->
+
+*/
+
+/************************/
+
+/*Footer*/
+#footer {
+  color: #fff;
+  background-color: black;
+  padding: 5px;
+}
+<<<<<<< HEAD
+#footer span {
+=======
+
+.footer span {
+>>>>>>> 0b5750a883f4557a6a140af6446921f62b572ac4
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+#footer span:first-child {
+  margin-right: 4em;
+}
+<<<<<<< HEAD
+#footer a {
+  margin-right: 0 auto;
+  display: inline-block;
+  color: lightblue;
+  margin-top: 8px;
+  padding-bottom: 5px;
+}
+div .number {
+  color: red;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 27px;
+/*  margin: 0 auto;
+  position: relative;
+  padding: 4px;
+  margin: 0;*/
+=======
+
+.footer a {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 10px;
+  display: inline-block;
+  color: lightblue
+}
+
+/* Pretty List */
+
+.pretty-list ol {
+  font-style: italic;
+  font-family: Georgia, Times, serif;
+  font-size: 24px;
+  color: #bfe1f1;
+}
+
+.pretty-list ol li p {
+  padding:8px;
+  font-style:normal;
+  font-family:Arial;
+  font-size:13px;
+  color:#eee;
+  border-left: 1px solid #999;
+}
+
+.pretty-list ol li p em {
+  display: block;
+  font-size: 3em;
+}
+
+/*List 2*/
+#list2 {
+  color: black;
+}
+#list2 ol li p {
+  color: #fff;
+}
+
+/*bitcoin div*/
+.why-crypdesigns-div {
+  background: black;
+>>>>>>> 0b5750a883f4557a6a140af6446921f62b572ac4
+}
+
+/*Navbar*/
+
+.navbar {
+  margin-bottom: 0!important;
+}
+
+@media screen and (min-width:768px){
+    .navbar-brand-centered {
+        position: absolute;
+        left: 50%;
+        display: block;
+        width: 160px;
+        text-align: center;
+        background-color: #eee;
+    }
+    .navbar>.container .navbar-brand-centered, 
+    .navbar>.container-fluid .navbar-brand-centered {
+        margin-left: -80px;
+    }
+}
