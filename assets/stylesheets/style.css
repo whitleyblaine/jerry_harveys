@@ -19,16 +19,12 @@ h2{
    padding-bottom: 0; /* Height of the footer */
 }
 
-footer {
+#footer {
    position:absolute;
    bottom:0;
    width:100%;
    height:100px; /* Height of the footer */
    font-family: 'Bree Serif', serif;
-}
-
-b {
-  font-size: 20px;
 }
 
 * {margin:0;padding:0;} 
@@ -71,15 +67,18 @@ You also need to include this conditional style in the <head> of your HTML file 
 */
 
 /************************/
-
-/*Footer*/
-#footer div {
-  margin: 0 auto;
+#c {
+  color: lightblue;
+  float: right;
 }
 
+/*Footer*/
 #footer {
-  margin: 5px;
   background: black;
+}
+
+#footer:hover {
+  font-size: 20px;
 }
 
 #wrap {
@@ -90,25 +89,16 @@ You also need to include this conditional style in the <head> of your HTML file 
   background-image: url("../images/wood.jpg");
 }
 
-#footer span {
+#footer a {
+  margin: 1.5em 2em 1em 2em;
   display: inline-block;
-}
-
-#footer span:first-child {
-  margin-right: 4em;
+  float: left;
 }
 
 .number {
   color: brown;
   font-family: 'Bree Serif', serif;
   font-size: 22px;
-}
-
-#footer a {
-  margin: 1.5em 2em 1em 2em;
-  display: inline-block;
-  margin-right: 0 auto;
-  color: white;
 }
 
 /*Navbar*/
