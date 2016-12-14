@@ -7,7 +7,8 @@ body {
 
 h2{
   font-family: 'Bree Serif', serif;
-
+  color: black;
+  padding: 3px;
 }
 
 #wrapper {
@@ -76,6 +77,13 @@ You also need to include this conditional style in the <head> of your HTML file 
   float: left;
 }
 
+
+
+/*CONTACT PAGE*/
+.contact-info {
+  color: black;
+}
+
 /*Footer*/
 #footer {
   background: black;
@@ -104,6 +112,10 @@ You also need to include this conditional style in the <head> of your HTML file 
   color: brown;
   font-family: 'Bree Serif', serif;
   font-size: 22px;
+}
+
+#phone {
+  font-size: 19px;
 }
 
 /*Navbar*/
