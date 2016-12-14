@@ -88,10 +88,19 @@
 
   <script type="text/javascript">
     $('.list li').on('click', function() {
+      // alert('hi');
       var menu = $(this).data('menu');
+      console.log('menu: ' + menu);
+
+      if (menu == "specials") {
+        menu = "specials-1";
+      };
+
+
       var imgSrc = "./assets/images/" + menu + ".png";
+      console.log('img src: ' + imgSrc);
+      
       $('.main-content img').attr('src', imgSrc);
-      console.log('img src = ' + imgSrc);
     })
   </script>
   
