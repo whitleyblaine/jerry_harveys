@@ -72,27 +72,32 @@ You also need to include this conditional style in the <head> of your HTML file 
   float: right;
 }
 
+#fbLogo img {
+  float: left;
+}
+
 /*Footer*/
 #footer {
   background: black;
+  font-size: 20px;
+  padding: 19px 20px 0 20px;
 }
 
-#footer:hover {
-  font-size: 20px;
+#footer a:hover {
+  color: darkred;
+  font-style: bolder; 
 }
 
 #wrap {
   color:white;
   font-size: 17px;
-  margin: 0;
   padding: 25px;
   background-image: url("../images/wood.jpg");
 }
 
 #footer a {
-  margin: 1.5em 2em 1em 2em;
+  padding-top: 1em 2em 1em 2em;
   display: inline-block;
-  float: left;
 }
 
 .number {
