@@ -125,3 +125,14 @@ You also need to include this conditional style in the <head> of your HTML file 
         margin-left: -80px;
     }
 }
+
+
+
+/*Media Queries for Logo*/
+
+#logo {
+  position: relative;
+  top: 1em;
+  left: 5em;
+}
+
