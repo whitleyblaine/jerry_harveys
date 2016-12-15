@@ -26,29 +26,7 @@
           <div class="collapse navbar-collapse" id="navbar-brand-centered">
             <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
-              <li class="dropdown active">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu
-                <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="./menu.html">All</a></li>
-                  <li><a href="./menu.html">Appetizers</a></li>
-                  <li><a href="#">Specials</a></li>
-                  <li><a href="#">Deli Platters</a></li>
-                  <li><a href="#">Fish and Salad Platters</a></li>
-                  <li><a href="#">Hot Open Sandwiches</a></li>
-                  <li><a href="#">Deli Sandwiches</a></li>
-                  <li><a href="#">Sandwiches</a></li>
-                  <li><a href="#">Burgers</a></li>
-                  <li><a href="#">Wraps</a></li>
-                  <li><a href="#">Light Menu</a></li>
-                  <li><a href="#">Breakfast Specials</a></li>
-                  <li><a href="#">Breakfast</a></li>
-                  <li><a href="#">Side Orders</a></li>
-                  <li><a href="#">Soups and Beverages</a></li>
-                  <li><a href="#">Desserts</a></li>
-                  <li><a href="#">Children's Menu</a></li>
-                </ul>
-              </li>
+              <li class="active"><a href="menu.html">Menu</a></li>
               <li><a href="aboutUs.html">About Us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -70,22 +48,65 @@
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
+      <br>
       <div class="row">
-          <div class="col-md-12">
-            <img src="./assets/images/appetizers.png" class="center-block" style="margin-top: 1em">
+        <div class="col-md-2 col-sm-4 sidebar1">
+          <div class="left-navigation">
+            <ul class="list">
+              <h5><strong>MENUS</strong></h5>
+              <li data-menu="appetizers">Appetizers</li>
+              <li data-menu="specials">Specials</li>
+              <li data-menu="deli-platters">Deli Platters</li>
+              <li data-menu="fish-salad-platters">Fish and Salad Platters</li>
+              <li data-menu="hot-open-sandwiches">Hot Open Sandwiches</li>
+              <li>Deli Sandwiches</li>
+              <li>Sandwiches</li>
+              <li>Burgers</li>
+              <li>Wraps</li>
+              <li>Light Menu</li>
+              <li>Breakfast</li>
+              <li>Side Orders</li>
+              <li>Soups and Beverages</li>
+              <li>Desserts</li>
+              <li>Children's Menu</li>
+            </ul>
           </div>
-        </div>
+      </div>
+      <div class="col-md-10 col-sm-8 main-content">
+        <img src="./assets/images/appetizers.png" class="center-block" style="margin-top: 1em">
       </div>
     </div>
   </div>
 
   <div id="footer">
+<<<<<<< HEAD
     <a href="https://www.facebook.com/Jerry-Harveys-Deli-1718106888431904/"><img class="alignnone size-full wp-image-933 staysmall" id="fbLogo" alt="fb35" src="http://www.jerryandharveys.com/fooddudes/wp-content/uploads/2012/11/fb35.jpg" width="33" height="33"> Like Us on Facebook!</a>  <span id="c">&copy "Created by Whitley Blaine and Daniel Merkin"</span>
+=======
+    <a href="https://www.facebook.com/Jerry-Harveys-Deli-1718106888431904/"><img class="alignnone size-full wp-image-933 staysmall" id="fbLogo" alt="fb35" src="http://www.jerryandharveys.com/fooddudes/wp-content/uploads/2012/11/fb35.jpg" width="40" height="40"> Like Us on Facebook!</a><span id="c">&copy Created by <a href="https://www.github.com/whitleyblaine">Whitley Blaine</a> and <a href="https://www.github.com/dmerk2">Daniel Merkin</span>
+>>>>>>> a6a828c
   </footer>
   
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="./assets/js.js"></script>
+
+  <script type="text/javascript">
+    $('.list li').on('click', function() {
+      // alert('hi');
+      var menu = $(this).data('menu');
+      console.log('menu: ' + menu);
+
+      if (menu == "specials") {
+        menu = "specials-1";
+      };
+
+
+      var imgSrc = "./assets/images/" + menu + ".png";
+      console.log('img src: ' + imgSrc);
+      
+      $('.main-content img').attr('src', imgSrc);
+    })
+  </script>
   
 </body>
 </html>
