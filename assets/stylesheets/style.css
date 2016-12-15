@@ -12,6 +12,7 @@ h2{
 
 blockquote {
     font-family: 'Space Mono', monospace;
+    font-size: 21px;
 }
 
 #wrapper {
@@ -94,7 +95,7 @@ You also need to include this conditional style in the <head> of your HTML file 
 
 #wrap {
   color: black;
-  font-size: 19px;
+  font-size: 12px;
   font-family: 'Aref Ruqaa', serif;
   padding: 25px;
   background-image: url("../images/wood.jpg");
