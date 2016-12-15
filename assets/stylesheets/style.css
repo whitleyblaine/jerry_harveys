@@ -5,22 +5,39 @@ body {
    height:100%;
 }
 
-h2{
-/*  font-family: 'Space Mono', monospace;
-  color: black;
-  padding: 3px;*/
-  font-family: 'Aref Ruqaa', serif;
-  color: black;
+#directions{
+  color: darkred;
+  padding-left: 5px;
 }
 
+#hours{
+  color: black;
+  margin-top: 1em;
+  font-family: 'Aref Ruqaa', serif;
+  font-size: 27px;
+  padding-left: 5px;
+}
+
+<<<<<<< HEAD
 blockquote {
     font-family: 'Space Mono', monospace;
     font-size: 21px;
+=======
+#wrap blockquote {
+  font-family: 'Space Mono', monospace;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+#contactLogo{
+  position: relative;
+  margin-right: 7em;
+  top: 1em;
+>>>>>>> danBranch
 }
 
 #wrapper {
    min-height:100%;
-   position:relative;
 }
 
 #body {
@@ -32,7 +49,7 @@ blockquote {
    bottom:0;
    width:100%;
    height:100px; /* Height of the footer */
-   font-family: 'Aref Ruqaa', serif;
+   font-style: 'Aref Ruqaa', serif;
 }
 
 * {margin:0;padding:0;} 
@@ -84,11 +101,10 @@ You also need to include this conditional style in the <head> of your HTML file 
   float: left;
 }
 
-
-
 /*CONTACT PAGE*/
 .contact-info {
   color: black;
+  padding-left: 3px;
 }
 
 /*Footer*/
@@ -118,7 +134,11 @@ You also need to include this conditional style in the <head> of your HTML file 
 
 .number {
   color: brown;
+<<<<<<< HEAD
   font-family: 'Bree Serif', serif;
+=======
+  font-family: 'Space Mono', monospace;
+>>>>>>> danBranch
   font-size: 24px;
 }
 
@@ -126,12 +146,17 @@ You also need to include this conditional style in the <head> of your HTML file 
   font-size: 28px;
   font-weight: bolder;
   font-family: 'Mirza', cursive;
+<<<<<<< HEAD
+=======
+  padding-left: 5px;
+>>>>>>> danBranch
 }
 
 /*Navbar*/
 .navbar {
   margin-bottom: 0!important;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: !important 'Aref Ruqaa', cursive;
+  font-size: 12px;
 }
 
 @media screen and (min-width:768px){
@@ -155,6 +180,7 @@ You also need to include this conditional style in the <head> of your HTML file 
 
 #logo {
   position: relative;
+  padding: 3px;
   top: 1em;
   left: 5em;
 }
@@ -173,15 +199,11 @@ You also need to include this conditional style in the <head> of your HTML file 
     padding: 0px;
     min-height: 100%;
 }
+
 .logo {
     max-height: 130px;
 }
-.logo>img {
-    margin-top: 30px;
-    padding: 3px;
-    border: 3px solid white;
-    border-radius: 100%;
-}
+
 .list {
     color: #fff;
     list-style: none;
