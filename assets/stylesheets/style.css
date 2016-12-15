@@ -6,11 +6,9 @@ body {
 }
 
 h2{
-<<<<<<< HEAD
-  font-family: 'Space Mono', monospace;
+/*  font-family: 'Space Mono', monospace;
   color: black;
-  padding: 3px;
-=======
+  padding: 3px;*/
   font-family: 'Aref Ruqaa', serif;
   color: black;
 }
@@ -18,7 +16,6 @@ h2{
 blockquote {
     font-family: 'Space Mono', monospace;
     font-size: 21px;
->>>>>>> a6a828c7f059131ce86ceec83b90344c0b432a1b
 }
 
 #wrapper {
@@ -121,7 +118,6 @@ You also need to include this conditional style in the <head> of your HTML file 
 
 .number {
   color: brown;
-<<<<<<< HEAD
   font-family: 'Bree Serif', serif;
   font-size: 24px;
 }
@@ -130,10 +126,6 @@ You also need to include this conditional style in the <head> of your HTML file 
   font-size: 28px;
   font-weight: bolder;
   font-family: 'Mirza', cursive;
-=======
-  font-family: 'Mirza', cursive;
-  font-size: 22px;
->>>>>>> a6a828c7f059131ce86ceec83b90344c0b432a1b
 }
 
 /*Navbar*/
