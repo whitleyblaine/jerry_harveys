@@ -6,19 +6,20 @@ body {
 }
 
 h2{
-<<<<<<< HEAD
-  font-family: 'Space Mono', monospace;
   color: black;
   padding: 3px;
-=======
   font-family: 'Aref Ruqaa', serif;
   color: black;
 }
 
-blockquote {
+.logo {
+  display: none;
+}
+
+#wrap blockquote {
     font-family: 'Space Mono', monospace;
-    font-size: 21px;
->>>>>>> a6a828c
+    font-size: 27px;
+    font-weight: bold;
 }
 
 #wrapper {
@@ -35,7 +36,7 @@ blockquote {
    bottom:0;
    width:100%;
    height:100px; /* Height of the footer */
-   font-family: 'Aref Ruqaa', serif;
+   font-style: 'Aref Ruqaa', serif;
 }
 
 * {margin:0;padding:0;} 
@@ -87,8 +88,6 @@ You also need to include this conditional style in the <head> of your HTML file 
   float: left;
 }
 
-
-
 /*CONTACT PAGE*/
 .contact-info {
   color: black;
@@ -121,8 +120,7 @@ You also need to include this conditional style in the <head> of your HTML file 
 
 .number {
   color: brown;
-<<<<<<< HEAD
-  font-family: 'Bree Serif', serif;
+  font-family: 'Space Mono', monospace;
   font-size: 24px;
 }
 
@@ -130,16 +128,14 @@ You also need to include this conditional style in the <head> of your HTML file 
   font-size: 28px;
   font-weight: bolder;
   font-family: 'Mirza', cursive;
-=======
-  font-family: 'Mirza', cursive;
   font-size: 22px;
->>>>>>> a6a828c
 }
 
 /*Navbar*/
 .navbar {
   margin-bottom: 0!important;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: !important 'Aref Ruqaa', cursive;
+  font-size: 12px;
 }
 
 @media screen and (min-width:768px){
@@ -184,12 +180,12 @@ You also need to include this conditional style in the <head> of your HTML file 
 .logo {
     max-height: 130px;
 }
-.logo>img {
+/*.logo>img {
     margin-top: 30px;
     padding: 3px;
     border: 3px solid white;
     border-radius: 100%;
-}
+}*/
 .list {
     color: #fff;
     list-style: none;
