@@ -39,7 +39,7 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Holidays
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="./#passover.html">Passover</a></li>
+                  <li><a href="./passover.html">Passover</a></li>
                   <li><a href="#">Yom Kippur</a></li>
                   <li><a href="#">Rash Hashana</a></li>
                   <li><a href="#">Thanksgiving</a></li>
@@ -58,13 +58,14 @@
             <h1 style="color: #752022; font-size: 3em; margin-top: 2em" class="text-center"></h1>
 
 
-            <form action="#" method="POST">
-              <h3> Please fill out so we can make your next visit even more enjoyable!</h3>
-              <h4> First Name: <input type="text" data-name="" id="firstName"></h4>
-              <h4> Last Name: <input type="text" data-name="" id="lastName" placeholder="Optional"></h4>
-              <h4> Email: <input type="email" data-email="" id="email"></h4>
-              <h4> Comments: <textarea name="comments" data-comments="" id="comments" rows="10" cols="20"  placeholder="Are there any comments you have?"></textarea></h4>
-              <input type="button" name="submit" value="Submit" id="submitButton" class="btn btn-primary">
+            <form action="#" method="POST" enctype="text/plain">
+              <h4> Fill out so we can make your next visit even more enjoyable!</h4>
+              <h4> First Name: <input type="text" data-name="" id="firstName" required></h4>
+              <h4> Last Name: <input type="text" data-name="" id="lastName" placeholder="Optional" required><h4>Would you like to recieve emails to recieve discounts?"</h4>
+              <h4> Email: <input type="email" data-email="" id="email" placeholder="youremail@email.com" required></h4>
+              <h4> With 10 being the highest number, how was your experience?<br/><input type="radio" value="1" required> 1 <input type="radio" value="2" required> 2 <input type="radio" value="3" required> 3 <input type="radio" value="4" required> 4 <input type="radio" value="5" required> 5 <input type="radio" value="6" required> 6 <input type="radio" value="7" required> 7 <input type="radio" value="8"> 8 <input type="radio" value="9"> 9 <input type="radio" value="10" required> 10
+              <h4> Comments: <textarea name="comments" data-comments="" id="comments" rows="10" cols="20"  placeholder="Are there any comments/suggestions you may have?" required></textarea></h4>
+              <input type="button" name="submit" value="Submit" id="submitButton" class="btn btn-primary" onclick="radioFuntion()">
             </form>
 
 
