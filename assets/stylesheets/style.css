@@ -22,12 +22,27 @@ body {
   font-family: 'Space Mono', monospace;
   font-size: 27px;
   font-weight: bold;
+  text-align: center;
+}
+
+#cateringLogo {
+  position: relative;
+  top: 5em;
+  right: 23em;
+  text-align: center;
+}
+
+#aboutUsLogo {
+  position: relative;
+  top: 5em;
+  right: 23em;
+  text-align: center;
 }
 
 #contactLogo{
   position: relative;
-  margin-right: 7em;
-  top: 1em;
+  top: 2em;
+  text-align: center;
 }
 
 #wrapper {
@@ -98,7 +113,8 @@ You also need to include this conditional style in the <head> of your HTML file 
 /*CONTACT PAGE*/
 .contact-info {
   color: black;
-  padding-left: 3px;
+  padding-left: 2em;
+  text-align: center;
 }
 
 /*Footer*/
@@ -165,11 +181,11 @@ You also need to include this conditional style in the <head> of your HTML file 
 
 /*Media Queries for Logo*/
 
-#logo {
+#logoHome {
   position: relative;
-  padding: 3px;
-  top: 1em;
-  left: 5em;
+  top: 1.2em;
+  left: 7em;
+  text-align: center;
 }
 
 .sidebar1 {
