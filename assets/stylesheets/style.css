@@ -227,3 +227,21 @@ You also need to include this conditional style in the <head> of your HTML file 
 }.main-content{
 text-align:center;
 }
+
+
+/*media queries*/
+
+@media screen and (max-width: 1030px) {
+  .number {
+    display: inline-block;
+    color: black;
+  }
+
+  .fade-carousel {
+    display: none;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+}
