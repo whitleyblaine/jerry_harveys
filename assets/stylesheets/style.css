@@ -22,12 +22,14 @@ body {
   font-family: 'Space Mono', monospace;
   font-size: 27px;
   font-weight: bold;
+  text-align: center;
 }
 
-#contactLogo{
+#contactlogo{
   position: relative;
-  margin-right: 7em;
+  margin-right: 3em;
   top: 1em;
+  margin-left: 1em;
 }
 
 #wrapper {
@@ -98,7 +100,8 @@ You also need to include this conditional style in the <head> of your HTML file 
 /*CONTACT PAGE*/
 .contact-info {
   color: black;
-  padding-left: 3px;
+  padding-left: 2em;
+  text-align: center;
 }
 
 /*Footer*/
@@ -167,9 +170,9 @@ You also need to include this conditional style in the <head> of your HTML file 
 
 #logo {
   position: relative;
-  padding: 3px;
   top: 1em;
-  left: 5em;
+  left: 4em;
+  text-align: center;
 }
 
 .sidebar1 {
