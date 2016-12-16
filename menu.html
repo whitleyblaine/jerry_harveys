@@ -55,20 +55,20 @@
             <ul class="list">
               <h5><strong>MENUS</strong></h5>
               <li data-menu="appetizers">Appetizers</li>
-              <li data-menu="specials">Specials</li>
+              <li data-menu="specials" data-num="2">Specials</li>
               <li data-menu="deli-platters">Deli Platters</li>
               <li data-menu="fish-salad-platters">Fish and Salad Platters</li>
               <li data-menu="hot-open-sandwiches">Hot Open Sandwiches</li>
-              <li>Deli Sandwiches</li>
-              <li>Sandwiches</li>
-              <li>Burgers</li>
-              <li>Wraps</li>
-              <li>Light Menu</li>
-              <li>Breakfast</li>
-              <li>Side Orders</li>
-              <li>Soups and Beverages</li>
-              <li>Desserts</li>
-              <li>Children's Menu</li>
+              <li data-menu="deli-sandwiches" data-num="2">Deli Sandwiches</li>
+              <li data-menu="sandwiches" data-num="3">Sandwiches</li>
+              <li data-menu="burgers">Burgers</li>
+              <li data-menu="wraps">Wraps</li>
+              <li data-menu="light-menu">Light Menu</li>
+              <li data-menu="breakfast">Breakfast</li>
+              <li data-menu="side-orders">Side Orders</li>
+              <li data-menu="soups-beverages">Soups and Beverages</li>
+              <li data-menu="desserts">Desserts</li>
+              <li data-menu="childrens-menu">Children's Menu</li>
             </ul>
           </div>
       </div>
@@ -90,19 +90,24 @@
 
   <script type="text/javascript">
     $('.list li').on('click', function() {
-      // alert('hi');
+      var imgSrc;
+      var newImage;
       var menu = $(this).data('menu');
-      console.log('menu: ' + menu);
+      var numberOfMenus = parseInt($(this).data('num'));
 
-      if (menu == "specials") {
-        menu = "specials-1";
-      };
+      console.log(numberOfMenus);
 
-
-      var imgSrc = "./assets/images/" + menu + ".png";
-      console.log('img src: ' + imgSrc);
-      
-      $('.main-content img').attr('src', imgSrc);
+      if (numberOfMenus > 1) {
+        $('.main-content').html('');
+        for (i = 1; i <= numberOfMenus; i++) {
+          imgSrc = "./assets/images/" + menu + "-" + i + ".png";
+          newImage = "<img src='" + imgSrc + "' style='margin-top: 2em'></img>";
+          $('.main-content').append(newImage);
+        }
+      } else {
+        imgSrc = "./assets/images/" + menu + ".png";
+        $('.main-content img').attr('src', imgSrc);
+      }
     })
   </script>
   
