@@ -59,10 +59,12 @@
 
 
             <form action="#" method="POST">
-              <h3> Please answer so we can make your visit even more enjoyable!</h3>
-              <h4> First Name: <input type="text" name="firstName" id="firstName" placeholder="First Name"></h4>
-              <h4> Last Name: <input type="text" name="lastName" id="lastName" placeholder="Last Name"></h4>
-
+              <h3> Please fill out so we can make your next visit even more enjoyable!</h3>
+              <h4> First Name: <input type="text" data-name="" id="firstName"></h4>
+              <h4> Last Name: <input type="text" data-name="" id="lastName" placeholder="Optional"></h4>
+              <h4> Email: <input type="email" data-email="" id="email"></h4>
+              <h4> Comments: <textarea name="comments" data-comments="" id="comments" rows="10" cols="20"  placeholder="Are there any comments you have?"></textarea></h4>
+              <input type="button" name="submit" value="Submit" id="submitButton" class="btn btn-primary">
             </form>
 
 
