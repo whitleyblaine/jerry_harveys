@@ -57,16 +57,20 @@
           <div class="col-md-6">
             <h1 style="color: #752022; font-size: 3em; margin-top: 2em" class="text-center"></h1>
 
-
-            <form action="#" method="POST" enctype="text/plain">
+            <form class="contact-form" id="contact-form" role="form" onsubmit="return sendMessage(this)">
               <h4> Fill out so we can make your next visit even more enjoyable!</h4>
-              <h4> First Name: <input type="text" data-name="" id="firstName" required></h4>
-              <h4> Last Name: <input type="text" data-name="" id="lastName" placeholder="Optional" required><h4>Would you like to recieve emails to recieve discounts?"</h4>
-              <h4> Email: <input type="email" data-email="" id="email" placeholder="youremail@email.com" required></h4>
-              <h4> With 10 being the highest number, how was your experience?<br/><input type="radio" value="1" required> 1 <input type="radio" value="2" required> 2 <input type="radio" value="3" required> 3 <input type="radio" value="4" required> 4 <input type="radio" value="5" required> 5 <input type="radio" value="6" required> 6 <input type="radio" value="7" required> 7 <input type="radio" value="8"> 8 <input type="radio" value="9"> 9 <input type="radio" value="10" required> 10
-              <h4> Comments: <textarea name="comments" data-comments="" id="comments" rows="10" cols="20"  placeholder="Are there any comments/suggestions you may have?" required></textarea></h4>
-              <input type="button" name="submit" value="Submit" id="submitButton" class="btn btn-primary" onclick="radioFuntion()">
+              <h4> Name: <input type="text" name="name" id="name" placeholder="Your name. eg., Joe" required></h4>
+              <h4>Would you like to recieve emails to recieve discounts?"</h4>
+              <h4> Email: <input type="email" name="email" id="email" placeholder="youremail@email.com"></h4>
+              <h4> With 10 being the highest number, how was your experience?</h4>
+              <br/>
+              <input type="radio" value="1" name="rating"> 1 <input type="radio" value="2" name="rating"> 2 <input type="radio" value="3" name="rating"> 3 <input type="radio" value="4" name="rating"> 4 <input type="radio" value="5" name="rating"> 5 <input type="radio" value="6" name="rating"> 6 <input type="radio" value="7" name="rating"> 7 <input type="radio" value="8" name="rating"> 8 <input type="radio" value="9" name="rating"> 9 <input type="radio" value="10" name="rating">
+              <h4> Comments: <textarea name="message" id="message" rows="10" cols="20" placeholder="Are there any comments/suggestions you may have?" required></textarea></h4>
+              <button class="btn btn-success pull-right" id="submitButton" type="submit" >Send Message</button>
             </form>
+
+            <p id="contact-success" class="text-success lead"></p>
+            <p id="contact-error" class="text-danger lead"></p>
 
 
           </div>
@@ -106,10 +110,51 @@
   <div id="footer">
     <a href="https://www.facebook.com/Jerry-Harveys-Deli-1718106888431904/"><img class="alignnone size-full wp-image-933 staysmall" id="fbLogo" alt="fb35" src="./assets/images/fbLogo.jpg" width="40" height="40"> Like Us on Facebook!</a><span id="c">&copy Created by <a href="https://www.github.com/whitleyblaine">Whitley Blaine</a> and <a href="https://www.github.com/dmerk2">Daniel Merkin</span>
   </footer>
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="./assets/js.js"></script>
   
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD8bX6rhfFb-en-Sc_zs69MwDDq6dr5jhw",
+      authDomain: "jerry-and-harveys.firebaseapp.com",
+      databaseURL: "https://jerry-and-harveys.firebaseio.com",
+      storageBucket: "jerry-and-harveys.appspot.com",
+      messagingSenderId: "257914621491"
+    };
+    firebase.initializeApp(config);
+
+    // Send message
+    var contactForm = $('#contact-form');
+    var contactSuccess = $('#contact-success');
+    var contactError = $('#contact-error');
+    var submitButton = $('#submitButton');
+
+    var onMessageComplete = function(error) {
+      submitButton.disabled = false;
+      if (error) {
+        contactError.html('Sorry. Could not send message.');
+      } else {
+        contactSuccess.html("Message has been sent.");
+        // hide the form
+        contactForm.css('display', 'none');
+      }
+    };
+
+    function sendMessage(formObj) {
+      // Store emails to firebase
+      var rootRef = firebase.database().ref();
+      rootRef.push({
+        name: formObj.name.value,
+        email: formObj.email.value,
+        rating: formObj.rating.value,
+        message: formObj.message.value
+      }, onMessageComplete);
+      submitButton.disabled = true;
+      return false;
+    }
+  </script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./assets/js/js.js"></script>
 </body>
 </html>
