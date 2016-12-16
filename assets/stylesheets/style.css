@@ -28,14 +28,14 @@ body {
 #cateringLogo {
   position: relative;
   top: 5em;
-  right: 23em;
+  right: 17em;
   text-align: center;
 }
 
 #aboutUsLogo {
   position: relative;
   top: 5em;
-  right: 23em;
+  right: 17em;
   text-align: center;
 }
 
@@ -159,7 +159,7 @@ You also need to include this conditional style in the <head> of your HTML file 
 .navbar {
   margin-bottom: 0!important;
   font-family: !important 'Aref Ruqaa', cursive;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 @media screen and (min-width:768px){
