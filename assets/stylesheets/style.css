@@ -5,6 +5,14 @@ body {
    height:100%;
 }
 
+h3#numberForPhone{
+  font-family: 'Space Mono', monospace;
+  color: brown;
+  margin-left: 4em;
+  font-size: 25px;
+  display: inline;
+}
+
 #directions{
   color: darkred;
   padding-left: 5px;
