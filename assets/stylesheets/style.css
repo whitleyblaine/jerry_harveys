@@ -25,11 +25,24 @@ body {
   text-align: center;
 }
 
-#contactlogo{
+#cateringLogo {
   position: relative;
-  margin-right: 3em;
-  top: 1em;
-  margin-left: 1em;
+  top: 5em;
+  right: 23em;
+  text-align: center;
+}
+
+#aboutUsLogo {
+  position: relative;
+  top: 5em;
+  right: 23em;
+  text-align: center;
+}
+
+#contactLogo{
+  position: relative;
+  top: 2em;
+  text-align: center;
 }
 
 #wrapper {
@@ -168,10 +181,10 @@ You also need to include this conditional style in the <head> of your HTML file 
 
 /*Media Queries for Logo*/
 
-#logo {
+#logoHome {
   position: relative;
-  top: 1em;
-  left: 4em;
+  top: 1.2em;
+  left: 7em;
   text-align: center;
 }
 
