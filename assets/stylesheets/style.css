@@ -28,14 +28,14 @@ body {
 #cateringLogo {
   position: relative;
   top: 5em;
-  right: 23em;
+  right: 17em;
   text-align: center;
 }
 
 #aboutUsLogo {
   position: relative;
   top: 5em;
-  right: 23em;
+  right: 17em;
   text-align: center;
 }
 
@@ -43,6 +43,62 @@ body {
   position: relative;
   top: 2em;
   text-align: center;
+}
+
+form {
+  height: 35em;
+  position: absolute;
+  border: 2px solid black;
+  margin-left: 4em;
+  top: 14em;
+  background: grey;
+  width: 43em;
+  opacity: .9;
+}
+
+#firstName {
+  position: relative;
+  height: 5px;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+#lastName {
+  position: relative;
+  height: 5px;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 0 10px 10px 10px;
+}
+
+#email {
+  position: relative;
+  height: 5px;
+  border: 2px solid black;
+  padding: 10px;
+  margin-left: 1.7em;
+}
+
+#comments {
+  position: relative;
+  height: 83px;
+  width: 231px;
+  border: 2px solid black;
+  padding: 5px;
+  margin-top: 7px
+}
+
+#submitButton {
+  border: 2px solid black;
+  text-align: center;
+  position: relative;
+  margin-left: 45%;
+}
+
+h4 {
+  text-align: center;
+  font-size: 15px;
+  padding: 3px 0 3px 0;
 }
 
 #wrapper {
@@ -159,7 +215,7 @@ You also need to include this conditional style in the <head> of your HTML file 
 .navbar {
   margin-bottom: 0!important;
   font-family: !important 'Aref Ruqaa', cursive;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 @media screen and (min-width:768px){
