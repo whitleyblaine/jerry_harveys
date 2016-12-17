@@ -57,6 +57,7 @@ form {
   height: 36em;
   position: relative;
   border: 2px solid black;
+  border-radius: 10px;
   margin-left: 4em;
   top: 8em;
   background: grey;
@@ -72,6 +73,7 @@ form {
 
 #name {
   border: 2px solid black;
+  padding: 2px;
 }
 
 #email {
@@ -86,6 +88,7 @@ form {
   border: 2px solid black;
   margin-top: 7px;
   margin-right: 2.9em;
+  padding: 2px;
 }
 
 #submitButton {
@@ -285,7 +288,9 @@ You also need to include this conditional style in the <head> of your HTML file 
 text-align:center;
 }
 
-
+#bq2 {
+  text-align: center;
+}
 /*media queries*/
 
 @media screen and (max-width: 1030px) {
