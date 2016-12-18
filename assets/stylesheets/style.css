@@ -99,6 +99,21 @@ form {
   margin-top: -.9em;
 }
 
+.lead {
+  text-align: center;
+  margin-top: 13em;
+}
+
+#dadPic {
+  height: 50em;
+  position: relative;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-right: 4em;
+  top: 1em;
+  width: 43em;
+}
+
 h4 {
   text-align: center;
   font-size: 15px;
@@ -236,8 +251,6 @@ You also need to include this conditional style in the <head> of your HTML file 
         margin-left: -80px;
     }
 }
-
-
 
 /*Media Queries for Logo*/
 
