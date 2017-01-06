@@ -5,6 +5,18 @@ body {
    height:100%;
 }
 
+
+/*header*/
+.headerList {
+  list-style: none;
+  font-size: 1.8em;
+  color: white;
+  font-family: 'Space Mono', monospace;
+} 
+
+
+
+
 h3#numberForPhone{
   font-family: 'Space Mono', monospace;
   color: brown;
@@ -254,12 +266,12 @@ You also need to include this conditional style in the <head> of your HTML file 
 
 /*Media Queries for Logo*/
 
-#logoHome {
+/*#logoHome {
   position: relative;
   top: 1.2em;
   left: 7em;
-  text-align: center;
-}
+  text-align: center;*/
+/*}*/
 
 .sidebar1 {
     background: #F17153;
