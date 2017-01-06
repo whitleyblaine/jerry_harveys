@@ -9,10 +9,15 @@ body {
 /*header*/
 .headerList {
   list-style: none;
-  font-size: 1.8em;
+  font-size: 1.3em;
   color: white;
   font-family: 'Space Mono', monospace;
-} 
+}
+
+#shoppingCenter {
+  font-size: 1.2em;
+  
+}
 
 
 
