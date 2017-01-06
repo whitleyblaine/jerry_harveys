@@ -188,10 +188,6 @@ You also need to include this conditional style in the <head> of your HTML file 
 */
 
 /************************/
-#c {
-  color: lightblue;
-  float: right;
-}
 
 #fbLogo img {
   float: left;
