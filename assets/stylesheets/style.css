@@ -16,7 +16,6 @@ body {
 
 #shoppingCenter {
   font-size: 1.2em;
-  
 }
 
 h3#numberForPhone{
@@ -59,73 +58,6 @@ h3#numberForPhone{
   top: 5em;
   right: 17em;
   text-align: center;
-}
-
-#contactLogo{
-  position: relative;
-  top: 2em;
-  text-align: center;
-}
-
-form {
-  height: 36em;
-  position: relative;
-  border: 2px solid black;
-  border-radius: 10px;
-  margin-left: 4em;
-  top: 8em;
-  background: grey;
-  width: 43em;
-  opacity: .9;
-}
-
-#radio {
-  text-align: center;
-  font-size: 20px;
-  padding: 6px;
-}
-
-#name {
-  border: 2px solid black;
-  padding: 2px;
-}
-
-#email {
-  position: relative;
-  height: 7px;
-  border: 2px solid black;
-  padding: 10px;
-}
-
-#message {
-  position: relative;
-  border: 2px solid black;
-  margin-top: 7px;
-  margin-right: 2.9em;
-  padding: 2px;
-}
-
-#submitButton {
-  border: 2px solid black;
-  position: absolute;
-  margin-left: 14em;
-  padding: 5px;
-  margin-top: -.9em;
-}
-
-.lead {
-  text-align: center;
-  margin-top: 13em;
-}
-
-#dadPic {
-  height: 50em;
-  position: relative;
-  border: 2px solid black;
-  border-radius: 10px;
-  margin-right: 4em;
-  top: 1em;
-  width: 43em;
 }
 
 h4 {
@@ -299,4 +231,18 @@ text-align:center;
   .contact-info {
     text-align: center;
   }
+}
+
+.feedBackPics {
+  padding: 1em;
+  border-radius: 50px;
+  height: 80px;
+  width: 80px;
+}
+
+.reviews {
+  padding: 10px;
+  font-size: 15px;
+  font-family: 'Reem Kufi', sans-serif;
+  margin-bottom:5px;
 }
