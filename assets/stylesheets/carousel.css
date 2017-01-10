@@ -10,8 +10,7 @@ Image credits: unsplash.com
 .fade-carousel {
     position: relative;
     height: 60vh;
-    margin-right: 3em;
-    margin-top: 5em;
+    margin-left: 3em;
 }
 .fade-carousel .carousel-inner .item {
     height: 60vh;

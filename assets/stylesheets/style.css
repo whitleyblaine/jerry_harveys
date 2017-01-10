@@ -5,16 +5,28 @@ body {
    height:100%;
 }
 
+.homepageText {
+  margin: 1em;
+  margin-top: 0;
+  padding: 1em;
+}
+
+#homeImage1 {
+  width: 100%;
+  margin: 2em 5em;
+}
+
 #directions{
   color: darkred;
   padding-left: 5px;
+  font-size: 2em;
 }
 
 #hours{
   color: black;
   margin-top: 1em;
   font-family: 'Aref Ruqaa', serif;
-  font-size: 27px;
+  font-size: 2em;
   padding-left: 5px;
 }
 
@@ -149,7 +161,7 @@ You also need to include this conditional style in the <head> of your HTML file 
 }
 
 #phone {
-  font-size: 28px;
+  font-size: 2em;
   font-weight: bolder;
   font-family: 'Mirza', cursive;
   padding-left: 5px;
@@ -181,11 +193,9 @@ You also need to include this conditional style in the <head> of your HTML file 
 
 /*Media Queries for Logo*/
 
-#logoHome {
-  position: relative;
-  top: 1.2em;
-  left: 7em;
-  text-align: center;
+img.center {
+  display: block;
+  margin: 2em auto 0 auto;
 }
 
 .sidebar1 {
