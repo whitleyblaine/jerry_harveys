@@ -116,6 +116,10 @@ Image credits: unsplash.com
   background-image: url(/images/binary.jpg);
 }
 
+/*.fade-carousel .slides #slide-1 {
+  background-image: url(/images/platter1.jpg);
+}*/
+
 /********************************/
 /*          Media Queries       */
 /********************************/
