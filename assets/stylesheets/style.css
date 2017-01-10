@@ -9,9 +9,11 @@ body {
 /*header*/
 .headerList {
   list-style: none;
-  font-size: 1.3em;
+  font-size: 1em;
   color: white;
   font-family: 'Space Mono', monospace;
+  text-align: right;
+  padding-right: 10px;
 }
 
 #shoppingCenter {
@@ -110,8 +112,9 @@ You also need to include this conditional style in the <head> of your HTML file 
 
 /************************/
 
-#fbLogo img {
-  float: left;
+#fbLogo {
+  float: right;
+  padding: 1em;
 }
 
 /*CONTACT PAGE*/
@@ -136,6 +139,7 @@ You also need to include this conditional style in the <head> of your HTML file 
 }
 
 .clickToCall {
+  padding-right: 3em;
   color: darkred;
   font-size: 17px;
   font-weight: bolder;
@@ -256,4 +260,10 @@ text-align:center;
   font-size: 15px;
   font-family: 'Reem Kufi', sans-serif;
   margin-bottom:5px;
+}
+
+footer {
+  background: black;
+  position: relative;
+  margin-right: 0;
 }
