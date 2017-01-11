@@ -44,6 +44,12 @@ body {
   text-align: center;
 }
 
+.footerList {
+  color: white;
+  list-style-type: none;
+  float: right;
+}
+
 #aboutUsLogo {
   position: relative;
   top: 5em;
@@ -55,6 +61,13 @@ h4 {
   text-align: center;
   font-size: 15px;
   padding: 3px 0 3px 0;
+}
+
+footer {
+  background: black;
+  padding: 5px;
+  width: 100%;
+  height: 100px;
 }
 
 #wrapper {
@@ -101,8 +114,24 @@ You also need to include this conditional style in the <head> of your HTML file 
 
 /************************/
 
-#fbLogo img {
-  float: left;
+#fbLogo {
+  float: left; 
+  width: 70px;
+  height: 70px;
+  padding: 5px;
+}
+
+#fbLogo:hover {
+  
+}
+
+.fbText {
+  color: white;
+}
+
+.fbText:hover {
+  color: blue;
+  font-size: 20px;
 }
 
 /*CONTACT PAGE*/
