@@ -100,8 +100,7 @@ html, body {height: 100%;}
 
 #wrap {min-height: 100%;}
 
-#main {overflow:auto;
-  padding-bottom: 80px;}  /* must be same height as the footer */
+#main {overflow:auto; height: 120%;};
 
 /*Opera Fix*/
 body:before {/* thanks to Maleika (Kohoutec)*/
@@ -125,6 +124,17 @@ You also need to include this conditional style in the <head> of your HTML file 
 */
 
 /************************/
+
+.mainDiv {
+  height: 150%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  overflow: auto;
+}
+
+.mainDiv h1 img {
+
+}
 
 #fbLogo {
   float: left; 
