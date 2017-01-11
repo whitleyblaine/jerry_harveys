@@ -6,118 +6,140 @@
   <link rel="stylesheet" type="text/css" href="assets/stylesheets/carousel.css">
   <link rel="stylesheet" type="text/css" href="assets/stylesheets/how-it-works.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
 </head>
 <body>
-  <div id="wrap">
+<div id="wrap">
+  <div class="row">
+    <img src="./assets/images/logo.png" id="logoHome" class="center">
+  </div>
+  <div id="main">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-brand-centered">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li class="active"><a href="feedback.html">Reviews</a></li>
+          </ul>
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="catering.html">Catering</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Holidays
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="passover.html">Passover</a></li>
+                <li><a href="roshhashana.html">Rosh Hashanah and Yom Kippur</a></li>
+                <li><a href="chanukah.html">Chanukah and Thanksgiving</a></li>
+                <li><a href="christmas.html">Christmas</a></li>
+              </ul>
+            </li>
+            <li><a href="aboutUs.html">About Us</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
     <div class="row">
-      <img src="./assets/images/logo.png" id="logoHome" class="center">
-    </div>
-    <div id="main" style="background: rgba(255, 255, 255, 0.6);">
-      <nav class="navbar navbar-inverse" role="navigation">
+      <div class="mainReviewDiv">
         <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="navbar-brand-centered">
-
-            <ul class="nav navbar-nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="menu.html">Menu</a></li>
-              <li class="active"><a href="feedback.html">Reviews</a></li>
-            </ul>
-            
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="catering.html">Catering</a></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Holidays
-                <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="passover.html">Passover</a></li>
-                  <li><a href="roshhashana.html">Rosh Hashanah and Yom Kippur</a></li>
-                  <li><a href="chanukah.html">Chanukah and Thanksgiving</a></li>
-                  <li><a href="christmas.html">Christmas</a></li>
-                </ul>
-              </li>
-
-              <li class="active"><a href="aboutUs.html">About Us</a></li>
-
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
-      <div class="row">
-        <div class="mainDiv">
-          <div class="container">
-            <h1 class="text-center" style="color: darkred; margin: 10px;">Here's what <img src="assets/images/yelp.png" style="margin-bottom: .6em"> users have to say:</h1>
-            <div class="col-md-6">
-              <div>
-                <img alt="Ron H." class="feedBackPics" src="https://s3-media3.fl.yelpcdn.com/photo/s-WBTFqVKHzOVgApN_9xZQ/60s.jpg"><span><a class="reviews" href="https://www.yelp.com/biz/jerry-and-harveys-englishtown-2?hrid=tUmjmIOdlL9hmOuIjxPJFA"><b>Ron H.</b></a></span><p class="reviews"><q>Very good. NOT kosher. From the brisket, to the corned beef, to the pastrami. Big sandwich, good quality. We also had the Matzoh ball soup & also vegetable soup. both were very good. All items displayed well. Everything looked fresh, the place is clean & the staff is nice. The counter guy, (Rick) was very helpful & took the time to explained the items. (very nice touch) Definitely will be back!!</q></p>
-              </div>
-                     
-              <div>
-                <img alt="Jess I." class="feedBackPics" src="https://s3-media1.fl.yelpcdn.com/photo/Tpvd96pCJYCttZvo5ia6Jw/60s.jpg"><span><a class="reviews" href="https://www.yelp.com/biz/jerry-and-harveys-englishtown-2?hrid=UsYnonoqd9cOYTvgItB1ew"><b>Jess I</b></a></span><p class="reviews"><q>If you're looking to have a lunch made up of delicious apps and a STACKED sandwich, Jerry and Harveys is the place for you. It's a classic dine-in deli/restaurant. We have been a few times, and never disappointed. The potato knishes are delicious. In our most recent visit, I got a turkey pastrami sandwich, which was HUGE and so tasty. The roast beef is so good, especially since they top 2 giant potato pancakes with it. When you first sit down, you get a plate of pickles to start. Make sure you take a trip when you can. It's worth every penny! TIP: make sure to get a side of their homemade Russian dressing. It's AMAZING and you can put it on literally anything you want here.</q></p>
-              </div>
-
-              <div>
-                <img alt="Food Lover W." class="feedBackPics" src="https://s3-media4.fl.yelpcdn.com/photo/QDqrgEqxWzEiHBDeL3mCKQ/60s.jpg"><span><a class="reviews" href="https://www.yelp.com/biz/jerry-and-harveys-englishtown-2?hrid=WDeOGNqPI8uZ-47Ym_Aehw"><b>Food Lover W.</b></a></span><br/><p class="reviews"><q>This deli is really quite something... it's in the strip with Livoti's (at the one end), it's on the same side as Anthony's Coal Fired Pizza and Moe's.  Is it a little run down and old fashioned?, yes, but its part of the charm.  Just roll with it.  So, on to the food, which is really great.  The matzoh ball soup and potato pancakes, very good.  Some outstanding sandwiches, the Black Russian, the Reuben, the Pastrami/Corned Beef Combo and the Hot Brisket.... The sandwiches are way too big, very generous portions.  I have had the coleslaw several times, fresh and crunchy, not sweet.  Excellent crunchy half sour pickles.  And of course they sell a variety of Dr. Brown's sodas, and they sell Tab!  They also sell big cookies - chocolate chip, linzer tarts, and a few other pastries, bagels, etc.  One note about the french fries, I have had both the sweet potato and the regular.  The sweet potato fries are always good, usually the same thing.  But the regular fries, always kind of weird, different cuts, shapes, not always crisp... they are never the same, kind of strange. If you like Jewish deli, this is your place.</q><!-- <br/> --></p>
-              </div>
+          <h1 class="text-center" style="color: darkred; margin: 10px;">Here's what <img src="assets/images/yelp.png" style="margin-bottom: .6em"> users have to say:</h1>
+          <div class="col-md-6">
+            <div>
+              <img alt="Ron H." class="feedBackPics" src="https://s3-media3.fl.yelpcdn.com/photo/s-WBTFqVKHzOVgApN_9xZQ/60s.jpg"><span><a class="reviews" href="https://www.yelp.com/biz/jerry-and-harveys-englishtown-2?hrid=tUmjmIOdlL9hmOuIjxPJFA"><b>Ron H.</b></a></span><p class="reviews"><q>Very good. NOT kosher. From the brisket, to the corned beef, to the pastrami. Big sandwich, good quality. We also had the Matzoh ball soup & also vegetable soup. both were very good. All items displayed well. Everything looked fresh, the place is clean & the staff is nice. The counter guy, (Rick) was very helpful & took the time to explained the items. (very nice touch) Definitely will be back!!</q></p>
+            </div>
+                   
+            <div>
+              <img alt="Jess I." class="feedBackPics" src="https://s3-media1.fl.yelpcdn.com/photo/Tpvd96pCJYCttZvo5ia6Jw/60s.jpg"><span><a class="reviews" href="https://www.yelp.com/biz/jerry-and-harveys-englishtown-2?hrid=UsYnonoqd9cOYTvgItB1ew"><b>Jess I</b></a></span><p class="reviews"><q>If you're looking to have a lunch made up of delicious apps and a STACKED sandwich, Jerry and Harveys is the place for you. It's a classic dine-in deli/restaurant. We have been a few times, and never disappointed. The potato knishes are delicious. In our most recent visit, I got a turkey pastrami sandwich, which was HUGE and so tasty. The roast beef is so good, especially since they top 2 giant potato pancakes with it. When you first sit down, you get a plate of pickles to start. Make sure you take a trip when you can. It's worth every penny! TIP: make sure to get a side of their homemade Russian dressing. It's AMAZING and you can put it on literally anything you want here.</q></p>
             </div>
 
-            <div class="col-md-6">
-        
-              <div>
-                <img class="feedBackPics" src="https://s3-media2.fl.yelpcdn.com/photo/dCumHBxKkL6GkDvrYUdS1Q/60s.jpg"><span><a href="https://www.yelp.com/biz/jerry-and-harveys-englishtown-2?hrid=ZKQpFEdxjvwdOwupbY5Uaw" class="reviews"><b>Jennifer D.</b></a></span><p class="reviews"><q>Very traditional Jewish deli. Large portions of delicious food with friendly service. We enjoyed our sandwiches and our half sour pickles!!</q></p>
-              </div>
-              <div>
-                <img class="feedBackPics" src="https://s3-media3.fl.yelpcdn.com/photo/YTXVTM2jo_8C2ZCWu2HF4A/60s.jpg"><span><a href="https://www.yelp.com/biz/jerry-and-harveys-englishtown-2?hrid=tevDS8wOR58qBhDWwpNn7A" class="reviews"><b>John D.</b></a></span><p class="reviews"><q>Pure samich Love. This Jewish deli & restaurant has been my favorite for many years.
+            <div>
+              <img alt="Food Lover W." class="feedBackPics" src="https://s3-media4.fl.yelpcdn.com/photo/QDqrgEqxWzEiHBDeL3mCKQ/60s.jpg"><span><a class="reviews" href="https://www.yelp.com/biz/jerry-and-harveys-englishtown-2?hrid=WDeOGNqPI8uZ-47Ym_Aehw"><b>Food Lover W.</b></a></span><br/><p class="reviews"><q>This deli is really quite something... it's in the strip with Livoti's (at the one end), it's on the same side as Anthony's Coal Fired Pizza and Moe's.  Is it a little run down and old fashioned?, yes, but its part of the charm.  Just roll with it.  So, on to the food, which is really great.  The matzoh ball soup and potato pancakes, very good.  Some outstanding sandwiches, the Black Russian, the Reuben, the Pastrami/Corned Beef Combo and the Hot Brisket.... The sandwiches are way too big, very generous portions.  I have had the coleslaw several times, fresh and crunchy, not sweet.  Excellent crunchy half sour pickles.  And of course they sell a variety of Dr. Brown's sodas, and they sell Tab!  They also sell big cookies - chocolate chip, linzer tarts, and a few other pastries, bagels, etc.  One note about the french fries, I have had both the sweet potato and the regular.  The sweet potato fries are always good, usually the same thing.  But the regular fries, always kind of weird, different cuts, shapes, not always crisp... they are never the same, kind of strange. If you like Jewish deli, this is your place.</q><!-- <br/> --></p>
+            </div>
+          </div>
 
-                Plenty of seats.  Magnificently large sandwiches of all usual premium deli options. The Black Russian ( once u go black) served w/ hot pastrami and Turkey (I always substitute Hot Corned beef for Turkey) with swiss & Cole slaw add a touch of Russian dressing piled high is a food fantasy. If I could only have 1 sandwich the rest of my life this may be it.  They provide unlimited complimentary sour & half sour pickles that are sublime.  The soups all rock, I'm not kidding and I'm not a member of the family lol .
+          <div class="col-md-6">
+      
+            <div>
+              <img class="feedBackPics" src="https://s3-media2.fl.yelpcdn.com/photo/dCumHBxKkL6GkDvrYUdS1Q/60s.jpg"><span><a href="https://www.yelp.com/biz/jerry-and-harveys-englishtown-2?hrid=ZKQpFEdxjvwdOwupbY5Uaw" class="reviews"><b>Jennifer D.</b></a></span><p class="reviews"><q>Very traditional Jewish deli. Large portions of delicious food with friendly service. We enjoyed our sandwiches and our half sour pickles!!</q></p>
+            </div>
+            <div>
+              <img class="feedBackPics" src="https://s3-media3.fl.yelpcdn.com/photo/YTXVTM2jo_8C2ZCWu2HF4A/60s.jpg"><span><a href="https://www.yelp.com/biz/jerry-and-harveys-englishtown-2?hrid=tevDS8wOR58qBhDWwpNn7A" class="reviews"><b>John D.</b></a></span><p class="reviews"><q>Pure samich Love. This Jewish deli & restaurant has been my favorite for many years.
 
-                If for some bizarre reason you're from the area & haven't experienced Hebrew heaven you must pop in.  Don't forget to wash it down with a black cherry soda, L'chaim.</q></p>
-              </div>
-              <div>
-                <img class="feedBackPics" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_styleguide/514f6997a318/assets/img/default_avatars/user_60_square.png"><span><a href="https://www.yelp.com/biz/jerry-and-harveys-englishtown-2?hrid=9sLiVc3Qi3ZzfaJhRkopKA" class="reviews"><b>Steven W.</b></a></span><p class="reviews"><q>Very traditional Jewish deli. Large portions of delicious food with friendly service. We enjoyed our sandwiches and our half sour pickles!!</q></p>
-              </div>
-              <div>
-                <img class="feedBackPics" src="https://s3-media3.fl.yelpcdn.com/photo/7kzZHLzqwdpoCNVtnNaWTg/60s.jpg"><span><a href="https://www.yelp.com/biz/jerry-and-harveys-englishtown-2?hrid=W2_eJNGcru87DvuRzw-_yw" class="reviews"><b>Rebecca A.</b></a></span><p class="reviews"><q>Fantastic overstuffed sandwiches. Go in hungry and leave with a full tummy. So the decor is a bit outdated, but the food is still awesome. I got a full decker turkey sandwich and it was colossal! I did finish it and I enjoyed every bite. Definitely recommend if you're starving and looking for some meat!</q></p>
-              </div>
+              Plenty of seats.  Magnificently large sandwiches of all usual premium deli options. The Black Russian ( once u go black) served w/ hot pastrami and Turkey (I always substitute Hot Corned beef for Turkey) with swiss & Cole slaw add a touch of Russian dressing piled high is a food fantasy. If I could only have 1 sandwich the rest of my life this may be it.  They provide unlimited complimentary sour & half sour pickles that are sublime.  The soups all rock, I'm not kidding and I'm not a member of the family lol .
+
+              If for some bizarre reason you're from the area & haven't experienced Hebrew heaven you must pop in.  Don't forget to wash it down with a black cherry soda, L'chaim.</q></p>
+            </div>
+            <div>
+              <img class="feedBackPics" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_styleguide/514f6997a318/assets/img/default_avatars/user_60_square.png"><span><a href="https://www.yelp.com/biz/jerry-and-harveys-englishtown-2?hrid=9sLiVc3Qi3ZzfaJhRkopKA" class="reviews"><b>Steven W.</b></a></span><p class="reviews"><q>Very traditional Jewish deli. Large portions of delicious food with friendly service. We enjoyed our sandwiches and our half sour pickles!!</q></p>
+            </div>
+            <div>
+              <img class="feedBackPics" src="https://s3-media3.fl.yelpcdn.com/photo/7kzZHLzqwdpoCNVtnNaWTg/60s.jpg"><span><a href="https://www.yelp.com/biz/jerry-and-harveys-englishtown-2?hrid=W2_eJNGcru87DvuRzw-_yw" class="reviews"><b>Rebecca A.</b></a></span><p class="reviews"><q>Fantastic overstuffed sandwiches. Go in hungry and leave with a full tummy. So the decor is a bit outdated, but the food is still awesome. I got a full decker turkey sandwich and it was colossal! I did finish it and I enjoyed every bite. Definitely recommend if you're starving and looking for some meat!</q></p>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
   
-    <footer>
-      <div class="row">
-        <div class="col-md-4">
-          <a href="https://www.facebook.com/Jerry-Harveys-Deli-1718106888431904/"><img src="assets/images/facebook_icon.png" id="fbLogo"></a><span class="fbText">Like Us On Facebook!</span>
-        </div>
-        <div class="col-md-4">
-          <p class="companyName">&copy; ....ourcompanyname!</p>
-        </div>
-        <div class="col-md-4">
-          <ul class="footerList">
-            <li id="shoppingCenter">Marlboro Plaza Shopping Center</li>
-            <li>96 Route 9</li>
-            <li>Englishtown, NJ, 07746</li>
-            <li><a class="clickToCall" href="tel:7329721122">(732) 972-1122</a></li>
-        </ul>
-       </div>
-      </div>
+  <footer class="footer-distributed">
+  <div class="container">
+    <div class="footer-left">
+
+      <h3>Jerry & Harvey's<br></h3>
+      <h5>Old Fashioned Brooklyn Noshery</h5>
     </div>
+
+    <div class="footer-center">
+
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>96 Route 9</span> Englishtown, NJ 07746</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+1 732 972-1122</p>
+      </div>
+
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@company.com">support@company.com</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <p class="footer-company-about">
+        <span>Follow us on Facebook!</span>
+        Get access to updates, promotions, news and more!
+      </p>
+
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/Jerry-Harveys-Deli-1718106888431904/"><i class="fa fa-facebook"></i></a>
+        <span style="color: white; font-size: 0.9em">-- Click here!</span>
+      </div>
+
+    </div>
+  </div>
   </footer>
 
-  
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="./assets/js/js.js"></script>
+
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./assets/js/js.js"></script>
 </body>
 </html>
