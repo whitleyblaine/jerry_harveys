@@ -309,7 +309,6 @@ text-align:center;
   width: 100%;
   text-align: left;
   font: bold 16px sans-serif;
-
   padding: 30px 30px;
 }
 
@@ -479,4 +478,8 @@ text-align:center;
   .footer-distributed .footer-center i{
     margin-left: 0;
   }
+}
+
+.holidayMenus {
+  padding: 2em;
 }
