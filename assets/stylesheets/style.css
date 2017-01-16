@@ -5,6 +5,22 @@ body {
    height:100%;
 }
 
+.mapInput {
+  padding: 7px;
+  margin: 15px 2em 15px 7em;
+  background: grey;
+  color: white;
+}
+
+#submitButton {
+  margin-right: 35%;
+  margin-left: 35%;
+  padding: 1em;
+  width: 140px;
+  background: darkred;
+  color: white;
+}
+
 .homepageText {
   margin: 1em;
   margin-top: 0;
