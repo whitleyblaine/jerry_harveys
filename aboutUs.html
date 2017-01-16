@@ -1,12 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-XXXXX-Y', 'auto');
+ga('send', 'pageview');
+</script>
+
+         <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        width: 450px; 
+        height: 500px; 
+        margin: 2em 3em 2em auto;
+        border: 2px solid black;
+      }
+      /* Optional: Makes the sample page fill the window. */
+/*      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }*/
+      .controls {
+        padding: 5px;
+        margin-top: 10px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      #origin-input,
+      #destination-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300PX;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 220px;
+      }
+
+      #origin-input:focus,
+      #destination-input:focus {
+        border-color: #4d90fe;
+      }
+
+    #mode-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        left: 120px;
+        margin-top: 4.3em;
+        position: absolute;
+        width: 220px;
+    }
+
+      #mode-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300px;
+      }
+
+    </style>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="keywords" content="">
         <meta name="author" content="">
-        <title>Jerry and Harvey's Jewish Noshery</title>
+        <title>Jerry and Harvey's Jewish Noshery - About</title>
         <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="assets/stylesheets/style.css">
         <link rel="stylesheet" type="text/css" href="assets/stylesheets/carousel.css">
@@ -55,7 +126,7 @@
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                         Holidays
-                <span class="caret"></span>
+                                        <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li>
@@ -82,14 +153,31 @@
                     <!-- /.container-fluid -->
                 </nav>
 
-            <div class="row">
-              <div class="col-md-6 homepage-left">
-                <div id="map" style="width: 400px; height: 500px; margin: 0 auto; margin-top: 2em; margin-bottom: 2em; border: 2px solid black;"></div>
-                </div>
-              </div>
-              <div class="col-md-6">
-            </div>
-            
+
+                <!-- <input type="text" name="currentLocation" class="mapInput" placeholder="Current Location"><span>
+                <input type="text" name="destination" class="mapInput" placeholder="Destination"></span>
+                <div><button id="submitButton">Get Directions</button></div>
+              <div id="map" style="width: 400px; height: 500px; margin: 2em auto 2em auto; border: 2px solid black;"></div> -->
+        
+            <div id="map"></div>
+        <div>
+            <input id="origin-input" class="controls" type="text"
+            placeholder="Enter an origin location">
+
+            <input id="destination-input" class="controls" type="text"
+            placeholder="Enter a destination location">
+        </div> <br/>
+        <div id="mode-selector" class="controls">
+            <input type="radio" name="type" id="changemode-walking" checked="checked">
+            <label for="changemode-walking"><p style="color: black;">Walking</p></label>
+
+            <input type="radio" name="type" id="changemode-transit">
+            <label for="changemode-transit"><p style="color: black;">Transit</p></label>
+
+            <input type="radio" name="type" id="changemode-driving">
+            <label for="changemode-driving"><p style="color: black;">Driving</p></label>
+        </div>
+      
             <footer class="footer-distributed">
                 <div class="container">
                     <div class="footer-left">
@@ -134,41 +222,113 @@
                     </div>
                 </div>
             </footer>
-        </div>
-        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
 
     <script>
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
       function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {zoom: 8});
-        var geocoder = new google.maps.Geocoder;
-        geocoder.geocode({'address': '96 Route 9 Englishtown NJ 07746'}, function(results, status) {
-          if (status === 'OK') {
-            map.setCenter(results[0].geometry.location);
-            new google.maps.Marker({
-              map: map,
-              position: results[0].geometry.location
-            });
+        var map = new google.maps.Map(document.getElementById('map'), {
+          mapTypeControl: false,
+          center: {lat: -33.8688, lng: 151.2195},
+          zoom: 13
+        });
+
+        new AutocompleteDirectionsHandler(map);
+      }
+
+       /**
+        * @constructor
+       */
+      function AutocompleteDirectionsHandler(map) {
+        this.map = map;
+        this.originPlaceId = null;
+        this.destinationPlaceId = null;
+        this.travelMode = 'WALKING';
+        var originInput = document.getElementById('origin-input');
+        var destinationInput = document.getElementById('destination-input');
+        var modeSelector = document.getElementById('mode-selector');
+        this.directionsService = new google.maps.DirectionsService;
+        this.directionsDisplay = new google.maps.DirectionsRenderer;
+        this.directionsDisplay.setMap(map);
+
+        var originAutocomplete = new google.maps.places.Autocomplete(
+            originInput, {placeIdOnly: true});
+        var destinationAutocomplete = new google.maps.places.Autocomplete(
+            destinationInput, {placeIdOnly: true});
+
+        this.setupClickListener('changemode-walking', 'WALKING');
+        this.setupClickListener('changemode-transit', 'TRANSIT');
+        this.setupClickListener('changemode-driving', 'DRIVING');
+
+        this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
+        this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
+
+        this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
+        this.map.controls[google.maps.ControlPosition.TOP_RIGHT].push(destinationInput);
+        this.map.controls[google.maps.ControlPosition.TOP_RIGHT].push(modeSelector);
+      }
+
+      // Sets a listener on a radio button to change the filter type on Places
+      // Autocomplete.
+      AutocompleteDirectionsHandler.prototype.setupClickListener = function(id, mode) {
+        var radioButton = document.getElementById(id);
+        var me = this;
+        radioButton.addEventListener('click', function() {
+          me.travelMode = mode;
+          me.route();
+        });
+      };
+
+      AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function(autocomplete, mode) {
+        var me = this;
+        autocomplete.bindTo('bounds', this.map);
+        autocomplete.addListener('place_changed', function() {
+          var place = autocomplete.getPlace();
+          if (!place.place_id) {
+            window.alert("Please select an option from the dropdown list.");
+            return;
+          }
+          if (mode === 'ORIG') {
+            me.originPlaceId = place.place_id;
           } else {
-            window.alert('Geocode was not successful for the following reason: ' +
-                status);
+            me.destinationPlaceId = place.place_id;
+          }
+          me.route();
+        });
+
+      };
+
+      AutocompleteDirectionsHandler.prototype.route = function() {
+        if (!this.originPlaceId || !this.destinationPlaceId) {
+          return;
+        }
+        var me = this;
+
+        this.directionsService.route({
+          origin: {'placeId': this.originPlaceId},
+          destination: {'placeId': this.destinationPlaceId},
+          travelMode: this.travelMode
+        }, function(response, status) {
+          if (status === 'OK') {
+            me.directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
           }
         });
-      }
+        function eqfeed_callback(response) {
+        map.data.addGeoJson(response);
+        }
+      };
+
     </script>
 
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz96YGU1ehbYJMiljTOLCYsloybX19m-Q&callback=initMap">
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places&callback=initMap"
+    async defer></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   </body>
 </html>
