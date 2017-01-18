@@ -5,7 +5,6 @@ body {
    height:100%;
 }
 
-
 /*Menu Page*/
 .main-content img {
   max-width:100%;
@@ -21,6 +20,14 @@ body {
   display: block;
 }
 
+
+#wrap h1 {
+  text-align: center;
+  color: darkred;
+  font-family: 'Aref Ruqaa', cursive; 
+  font-weight: bolder;
+  font-size: 50px;
+}
 
 .mapInput {
   padding: 7px;
@@ -44,9 +51,9 @@ body {
   padding: 1em;
 }
 
-.homepage-left {
+/*.homepage-left {
   border-right: 1px solid black;
-}
+}*/
 
 #directions{
   color: darkred;
@@ -81,6 +88,12 @@ body {
   top: 5em;
   right: 17em;
   text-align: center;
+}
+
+/*Catering Test*/
+
+#cateringTest {
+  min-height: 40em;
 }
 
 .footerList {
@@ -364,8 +377,9 @@ text-align:center;
 .footer-left h5{
   color: #fff;
   font-family: 'Cookie', cursive;
-  padding-left: 0;
   font-size: 1em;
+  margin-left: 4em;
+  padding: 1em;
 }
 
 /* The company logo */
@@ -374,6 +388,7 @@ text-align:center;
   color: darkred;
   font: normal 36px 'Cookie', cursive;
   margin: 0;
+  padding-left: 2em;
 }
 
 .footer-distributed h3 span{
