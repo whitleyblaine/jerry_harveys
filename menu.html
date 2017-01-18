@@ -3,17 +3,16 @@
 <head>
     <!-- Google Analytics -->
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-XXXXX-Y', 'auto');
-ga('send', 'pageview');
+  ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('send', 'pageview');
 </script>
 
-  <meta charset="UTF-8">
-  <meta name="author" content="">
+  <meta charset="utf-8">
   <meta name="keywords" content="restaurant, deli, menu, jewish, marlboro, new jersey">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -99,7 +98,7 @@ ga('send', 'pageview');
     </div>
   </div>
 
-  <footer class="footer-distributed">
+<footer class="footer-distributed">
   <div class="container">
     <div class="footer-left">
 
@@ -140,34 +139,34 @@ ga('send', 'pageview');
 
     </div>
   </div>
-  </footer>
+</footer>
   
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="./assets/js/js.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./assets/js/js.js"></script>
 
-  <script type="text/javascript">
-    $('.list li').on('click', function() {
-      var imgSrc;
-      var newImage;
-      var menu = $(this).data('menu');
-      var numberOfMenus = parseInt($(this).data('num'));
+<script type="text/javascript">
+  $('.list li').on('click', function() {
+    var imgSrc;
+    var newImage;
+    var menu = $(this).data('menu');
+    var numberOfMenus = parseInt($(this).data('num'));
 
-      console.log(numberOfMenus);
+    console.log(numberOfMenus);
 
-      if (numberOfMenus > 1) {
-        $('.main-content').html('');
-        for (i = 1; i <= numberOfMenus; i++) {
-          imgSrc = "./assets/images/" + menu + "-" + i + ".png";
-          newImage = "<img src='" + imgSrc + "' style='margin-top: 2em'></img>";
-          $('.main-content').append(newImage);
-        }
-      } else {
-        imgSrc = "./assets/images/" + menu + ".png";
-        $('.main-content img').attr('src', imgSrc);
+    if (numberOfMenus > 1) {
+      $('.main-content').html('');
+      for (i = 1; i <= numberOfMenus; i++) {
+        imgSrc = "./assets/images/" + menu + "-" + i + ".png";
+        newImage = "<img src='" + imgSrc + "' style='margin-top: 2em'></img>";
+        $('.main-content').append(newImage);
       }
-    })
-  </script>
+    } else {
+      imgSrc = "./assets/images/" + menu + ".png";
+      $('.main-content img').attr('src', imgSrc);
+    }
+  })
+</script>
   
 </body>
 </html>
