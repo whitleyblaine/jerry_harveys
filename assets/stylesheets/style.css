@@ -5,6 +5,23 @@ body {
    height:100%;
 }
 
+
+/*Menu Page*/
+.main-content img {
+  max-width:100%;
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 4em;
+}
+
+/*Fred image*/
+.fredImage {
+  max-width:70%;
+  margin: 2em auto;
+  display: block;
+}
+
+
 .mapInput {
   padding: 7px;
   margin: 15px 2em 15px 7em;
@@ -29,10 +46,6 @@ body {
 
 .homepage-left {
   border-right: 1px solid black;
-}
-
-#homeImage1 {
-  margin: 2em 0 2em 4em;
 }
 
 #directions{
@@ -209,6 +222,9 @@ You also need to include this conditional style in the <head> of your HTML file 
 #logoHome{
   position: relative;
   margin: 0 auto;
+  display: block;
+  max-width: 90%;
+
 }
 
 /*Navbar*/
