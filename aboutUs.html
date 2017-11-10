@@ -89,7 +89,7 @@
     <div classs="row">
       <img src="./assets/images/logo.png" alt="logo" id="logoHome" class="center">
     </div>
-    <div id="main">
+    <div id="main" style="background: rgba(255, 255, 255, 0.7);">
       <nav class="navbar navbar-inverse" role="navigation">
         <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
@@ -113,10 +113,10 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                   Holidays<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="passover.html">Passover</a></li>
                   <li><a href="roshhashana.html">Rosh Hashanah and Yom Kippur</a></li>
                   <li><a href="chanukah.html">Chanukah and Thanksgiving</a></li>
                   <li><a href="christmas.html">Christmas</a></li>
+                  <li><a href="passover.html">Passover</a></li>
                 </ul>
               </li>
             <li class="active"><a href="aboutUs.html">About Us</a></li>
@@ -126,6 +126,18 @@
       </div>
     </nav>
 
+  <div class="col-md-6 text-center" id="aboutUs">
+    <h1>About Us</h1>
+    <h3>Jerry & Harvey’s Brooklyn-style noshery is both a Deli and a Catering service, serving the community for over 34 years. We offer a wide range of catering options for parties both big and small. Sit back and relax, because WE CAN DO IT ALL FOR YOU!</h3>
+
+    <div class="contact-info">
+      <span><h2 id="directions">Located in the Marlboro Plaza <br/>&nbsp; Shopping Center<br/><b> 96 Rt 9 N and Rt 520
+      Marlboro, New Jersey</b></h2></span>
+      <br/>
+      <span id="phone">Telephone Number : </span><span class="number"><a href="tel:17329721122">(732) 972-1122</a></span><br/>
+      <p id="hours"><u>Monday - Thursday</u> 8:30AM - 8:00PM<br/><u>Friday</u> 8:30AM - 8:30PM<br/> <u>Saturday </u>8:00AM - 8:30PM<br/> <u>Sunday</u> 8:00AM - 8:00PM</p>
+    </div>
+  </div>
   <div id="map"></div>
   <div>
     <input id="origin-input" class="controls" type="text"
@@ -187,7 +199,7 @@
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
       mapTypeControl: false,
-      center: {lat: -33.8688, lng: 151.2195},
+      center: {lat: 40.2973319, lng: -74.3582041},
       zoom: 13
     });
 
@@ -279,7 +291,7 @@
   };
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places&callback=initMap"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpYjkNkVkElPwLFK-rXZQW_RorhpJrYAE&libraries=places&callback=initMap"
 async defer></script>
 
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
