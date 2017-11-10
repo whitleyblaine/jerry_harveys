@@ -25,68 +25,37 @@
   <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <style>
-  /* Always set the map height explicitly to define the size of the div
-   * element that contains the map. */
   #map {
     width: 450px; 
     height: 500px; 
     margin: 2em 3em 2em auto;
     border: 2px solid black;
   }
-  /* Optional: Makes the sample page fill the window. */
-/*  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }*/
-  .controls {
-    padding: 5px;
-    margin-top: 10px;
-    border: 1px solid transparent;
-    border-radius: 2px 0 0 2px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    height: 32px;
-    outline: none;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+  #floating-panel {
+      width: 450px; 
+    height: 50px;
+    margin: 2em 3em 2em auto;
+      background-color: #fff;
+      padding: 5px;
+      border: 1px solid #999;
+      text-align: center;
+      font-family: 'Roboto','sans-serif';
+      line-height: 30px;
+      padding-left: 10px;
   }
 
-  #origin-input,
-  #destination-input {
-    background-color: #fff;
-    font-family: Roboto;
-    font-size: 15px;
-    font-weight: 300PX;
-    padding: 0 11px 0 13px;
-    text-overflow: ellipsis;
-    width: 220px;
-  }
 
-  #origin-input:focus,
-  #destination-input:focus {
-    border-color: #4d90fe;
-  }
 
-  #mode-selector {
-    color: #fff;
-    background-color: #4d90fe;
-    left: 120px;
-    margin-top: 4.3em;
-    position: absolute;
-    width: 220px;
+  #btnGo {
+    margin-left: 10px;
   }
-
-  #mode-selector label {
-    font-family: Roboto;
-    font-size: 13px;
-    font-weight: 300px;
-  }
-
 </style>
 </head>
+
 <body>
   <div id="wrap">
-    <div classs="row">
+    <div class="row">
       <img src="./assets/images/logo.png" alt="logo" id="logoHome" class="center">
     </div>
     <div id="main" style="background: rgba(255, 255, 255, 0.7);">
@@ -107,11 +76,12 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="menu.html">Menu</a></li>
               <li><a href="feedback.html">Reviews</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                  Holidays<span class="caret"></span></a>
+                  Holidays<span class="caret"></span>
+                </a>
                 <ul class="dropdown-menu">
                   <li><a href="roshhashana.html">Rosh Hashanah and Yom Kippur</a></li>
                   <li><a href="chanukah.html">Chanukah and Thanksgiving</a></li>
@@ -119,180 +89,108 @@
                   <li><a href="passover.html">Passover</a></li>
                 </ul>
               </li>
-            <li class="active"><a href="aboutUs.html">About Us</a></li>
-          </ul>
-        </div>
+              <li class="active"><a href="aboutUs.html">About Us</a></li>
+            </ul>
+          </div>
         <!-- /.navbar-collapse -->
-      </div>
-    </nav>
+        </div>
+      </nav>
 
-  <div class="col-md-6 text-center" id="aboutUs">
-    <h1>About Us</h1>
-    <h3>Jerry & Harvey’s Brooklyn-style noshery is both a Deli and a Catering service, serving the community for over 34 years. We offer a wide range of catering options for parties both big and small. Sit back and relax, because WE CAN DO IT ALL FOR YOU!</h3>
+      <div class="row">
+        <div class="col-md-6 text-center" id="aboutUs">
+          <h1>About Us</h1>
+          <h3>Jerry & Harvey’s Brooklyn-style noshery is both a Deli and a Catering service, serving the community for over 34 years. We offer a wide range of catering options for parties both big and small. Sit back and relax, because WE CAN DO IT ALL FOR YOU!</h3>
 
-    <div class="contact-info">
-      <span><h2 id="directions">Located in the Marlboro Plaza <br/>&nbsp; Shopping Center<br/><b> 96 Rt 9 N and Rt 520
-      Marlboro, New Jersey</b></h2></span>
-      <br/>
-      <span id="phone">Telephone Number : </span><span class="number"><a href="tel:17329721122">(732) 972-1122</a></span><br/>
-      <p id="hours"><u>Monday - Thursday</u> 8:30AM - 8:00PM<br/><u>Friday</u> 8:30AM - 8:30PM<br/> <u>Saturday </u>8:00AM - 8:30PM<br/> <u>Sunday</u> 8:00AM - 8:00PM</p>
-    </div>
-  </div>
-  <div id="map"></div>
-  <div>
-    <input id="origin-input" class="controls" type="text"
-    placeholder="Enter an origin location">
-
-    <input id="destination-input" class="controls" type="text"
-    placeholder="Enter a destination location">
-  </div> <br/>
-  <div id="mode-selector" class="controls">
-    <input type="radio" name="type" id="changemode-walking" checked="checked">
-    <label for="changemode-walking"><p style="color: black;">Walking</p></label>
-
-    <input type="radio" name="type" id="changemode-transit">
-    <label for="changemode-transit"><p style="color: black;">Transit</p></label>
-
-    <input type="radio" name="type" id="changemode-driving">
-    <label for="changemode-driving"><p style="color: black;">Driving</p></label>
-  </div>
-
-<footer class="footer-distributed">
-  <div class="container">
-    <div class="footer-left">
-      <h3>Jerry & Harvey's<br></h3>
-      <h5>Old Fashioned Brooklyn Noshery</h5>
-    </div>
-    <div class="footer-center">
-      <div>
-        <i class="fa fa-map-marker"></i>
-        <p><span><a href="http://maps.google.com/?q=96 Route 9, Englishtown, NJ 07746">96 Route 9
-        Englishtown, NJ 07746</a></span></p>
-      </div>
-      <div>
-        <i class="fa fa-phone"></i>
-        <p><a href="tel:17329721122">732 972-1122</a></p>
-      </div>
-      <div>
-        <i class="fa fa-envelope"></i>
-        <p><a href="mailto:fred.merkin@gmail.com">fred.merkin@gmail.com</a></p>
+          <div class="contact-info">
+            <span><h2 id="directions">Located in the Marlboro Plaza <br/>&nbsp; Shopping Center<br/><b> 96 Rt 9 N and Rt 520
+            Marlboro, New Jersey</b></h2></span>
+            <br/>
+            <span id="phone">Telephone Number : </span><span class="number"><a href="tel:17329721122">(732) 972-1122</a></span><br/>
+            <p id="hours"><u>Monday - Thursday</u> 8:30AM - 8:00PM<br/><u>Friday</u> 8:30AM - 8:30PM<br/> <u>Saturday </u>8:00AM - 8:30PM<br/> <u>Sunday</u> 8:00AM - 8:00PM</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="floating-panel">
+            <b>Start: </b>
+            <input id="start"/>
+            <b style="margin-left: 10px">End: </b>
+            <select id="end">
+              <option value="96 U.S. 9, Englishtown, NJ 07726, USA">Jerry & Harvey's</option>
+            </select>
+            <button id="btnGo">Get Directions</button>
+          </div>
+          <div id="map"></div>
+        </div>
       </div>
     </div>
-    <div class="footer-right">
-      <p class="footer-company-about">
-          <span>Follow us on Facebook!</span>
-          Get access to updates, promotions, news and more!</p>
-      <div class="footer-icons">
-        <a href="https://www.facebook.com/Jerry-Harveys-Deli-1718106888431904/"><i class="fa fa-facebook"></i></a>
-        <span style="color: white; font-size: 0.9em">-- Click here!</span>
+
+  <footer class="footer-distributed">
+    <div class="container">
+      <div class="footer-left">
+        <h3>Jerry & Harvey's<br></h3>
+        <h5>Old Fashioned Brooklyn Noshery</h5>
+      </div>
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span><a href="http://maps.google.com/?q=96 Route 9, Englishtown, NJ 07746">96 Route 9
+          Englishtown, NJ 07746</a></span></p>
+        </div>
+        <div>
+          <i class="fa fa-phone"></i>
+          <p><a href="tel:17329721122">732 972-1122</a></p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:fred.merkin@gmail.com">fred.merkin@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+            <span>Follow us on Facebook!</span>
+            Get access to updates, promotions, news and more!</p>
+        <div class="footer-icons">
+          <a href="https://www.facebook.com/Jerry-Harveys-Deli-1718106888431904/"><i class="fa fa-facebook"></i></a>
+          <span style="color: white; font-size: 0.9em">-- Click here!</span>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
+</div>
 
 
 <script>
-  // This example requires the Places library. Include the libraries=places
-  // parameter when you first load the API. For example:
-  // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
   function initMap() {
+    var directionsService = new google.maps.DirectionsService;
+    var directionsDisplay = new google.maps.DirectionsRenderer;
     var map = new google.maps.Map(document.getElementById('map'), {
-      mapTypeControl: false,
-      center: {lat: 40.2973319, lng: -74.3582041},
-      zoom: 13
+        zoom: 12,
+        center: { lat: 40.296743, lng: -74.301145 }
     });
+    directionsDisplay.setMap(map);
 
-    new AutocompleteDirectionsHandler(map);
+    var onChangeHandler = function () {
+        calculateAndDisplayRoute(directionsService, directionsDisplay);
+    };
+    document.getElementById('btnGo').addEventListener('click', onChangeHandler);
   }
 
-   /**
-    * @constructor
-   */
-  function AutocompleteDirectionsHandler(map) {
-    this.map = map;
-    this.originPlaceId = null;
-    this.destinationPlaceId = null;
-    this.travelMode = 'WALKING';
-    var originInput = document.getElementById('origin-input');
-    var destinationInput = document.getElementById('destination-input');
-    var modeSelector = document.getElementById('mode-selector');
-    this.directionsService = new google.maps.DirectionsService;
-    this.directionsDisplay = new google.maps.DirectionsRenderer;
-    this.directionsDisplay.setMap(map);
-
-    var originAutocomplete = new google.maps.places.Autocomplete(
-        originInput, {placeIdOnly: true});
-    var destinationAutocomplete = new google.maps.places.Autocomplete(
-        destinationInput, {placeIdOnly: true});
-
-    this.setupClickListener('changemode-walking', 'WALKING');
-    this.setupClickListener('changemode-transit', 'TRANSIT');
-    this.setupClickListener('changemode-driving', 'DRIVING');
-
-    this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
-    this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
-
-    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
-    this.map.controls[google.maps.ControlPosition.TOP_RIGHT].push(destinationInput);
-    this.map.controls[google.maps.ControlPosition.TOP_RIGHT].push(modeSelector);
+  function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+    directionsService.route({
+        origin: document.getElementById('start').value,
+        destination: document.getElementById('end').value,
+        travelMode: google.maps.TravelMode.DRIVING
+    }, function (response, status) {
+        if (status === google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+        } else {
+            window.alert('Directions request failed due to ' + status);
+        }
+    });
   }
-
-  // Sets a listener on a radio button to change the filter type on Places
-  // Autocomplete.
-  AutocompleteDirectionsHandler.prototype.setupClickListener = function(id, mode) {
-    var radioButton = document.getElementById(id);
-    var me = this;
-    radioButton.addEventListener('click', function() {
-      me.travelMode = mode;
-      me.route();
-    });
-  };
-
-  AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function(autocomplete, mode) {
-    var me = this;
-    autocomplete.bindTo('bounds', this.map);
-    autocomplete.addListener('place_changed', function() {
-      var place = autocomplete.getPlace();
-      if (!place.place_id) {
-        window.alert("Please select an option from the dropdown list.");
-        return;
-      }
-      if (mode === 'ORIG') {
-        me.originPlaceId = place.place_id;
-      } else {
-        me.destinationPlaceId = place.place_id;
-      }
-      me.route();
-    });
-
-  };
-
-  AutocompleteDirectionsHandler.prototype.route = function() {
-    if (!this.originPlaceId || !this.destinationPlaceId) {
-      return;
-    }
-    var me = this;
-
-    this.directionsService.route({
-      origin: {'placeId': this.originPlaceId},
-      destination: {'placeId': this.destinationPlaceId},
-      travelMode: this.travelMode
-    }, function(response, status) {
-      if (status === 'OK') {
-        me.directionsDisplay.setDirections(response);
-      } else {
-        window.alert('Directions request failed due to ' + status);
-      }
-    });
-    function eqfeed_callback(response) {
-    map.data.addGeoJson(response);
-    }
-  };
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpYjkNkVkElPwLFK-rXZQW_RorhpJrYAE&libraries=places&callback=initMap"
-async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpYjkNkVkElPwLFK-rXZQW_RorhpJrYAE&callback=initMap" async defer></script>
 
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
