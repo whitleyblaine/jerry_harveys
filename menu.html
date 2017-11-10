@@ -151,18 +151,12 @@
       var menu = $(this).data('menu');
       var numberOfMenus = parseInt($(this).data('num'));
 
-      console.log(numberOfMenus);
-
       $('.main-content').html('');
 
-      if (numberOfMenus > 1) {
-        for (i = 1; i <= numberOfMenus; i++) {
-          imgSrc = "./assets/images/" + menu + "-" + i + ".png";
-          newImage = "<img src='" + imgSrc + "' style='margin-top: 2em' class='menuImage'></img>";
-          $('.main-content').append(newImage);
-        }
-      } else {
-        imgSrc = "./assets/images/" + menu + ".png";
+      console.log(numberOfMenus);
+
+      for (i = 1; i <= numberOfMenus; i++) {
+        numberOfMenus > 1 ? imgSrc = "./assets/images/" + menu + "-" + i + ".png" : imgSrc = "./assets/images/" + menu + ".png";
         newImage = "<img src='" + imgSrc + "' style='margin-top: 2em' class='menuImage'></img>";
         $('.main-content').append(newImage);
       }
