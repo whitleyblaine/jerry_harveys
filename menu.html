@@ -141,25 +141,6 @@
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="./assets/js/script.js"></script>
-
-  <script type="text/javascript">
-    $('.list li').on('click', function() {
-      var imgSrc;
-      var newImage;
-      var menu = $(this).data('menu');
-      var numberOfMenus = parseInt($(this).data('num'));
-
-      $('.main-content').html('');
-
-      console.log(numberOfMenus);
-
-      for (i = 1; i <= numberOfMenus; i++) {
-        numberOfMenus > 1 ? imgSrc = "./assets/images/" + menu + "-" + i + ".png" : imgSrc = "./assets/images/" + menu + ".png";
-        newImage = "<img src='" + imgSrc + "' style='margin-top: 2em' class='menuImage'></img>";
-        $('.main-content').append(newImage);
-      }
-    })
-  </script>
+  <script type="text/javascript" src="./assets/js/menu.js"></script>
 </body>
 </html>
